@@ -10,7 +10,7 @@ def get_total_cash(pet_shop):
 def add_or_remove_cash(pet_shop, money):
     if money > 0:
         pet_shop["admin"]["total_cash"] += money
-           
+     
 
 # def missing here 
 
@@ -20,3 +20,10 @@ def get_pets_sold(pet_shop):
 
 def increase_pets_sold(pet_shop, pets_sold):
     pet_shop["admin"]["pets_sold"] += pets_sold
+
+
+def get_stock_count(pet_shop):
+    
+
+
+
