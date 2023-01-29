@@ -8,11 +8,8 @@ def get_total_cash(pet_shop):
 
 
 def add_or_remove_cash(pet_shop, money):
-    if money > 0:
-        pet_shop["admin"]["total_cash"] += money
-     
+    pet_shop["admin"]["total_cash"] += money
 
-# def missing here 
 
 def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
@@ -26,17 +23,28 @@ def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
     
 
-# def get_pets_by_breed(pet_shop, breed):
+def get_pets_by_breed(pet_shop, breed):
+    for pet in pet_shop["pets"]:
+        if pet == breed:
+            return pet
 
 
 def find_pet_by_name(pet_shop, name):
    for pet_name in pet_shop["pets"]:
     if pet_name["name"] == name:
         return pet_name
-
+   
+# @unittest.skip("delete this line to run the test")
+# def test_remove_pet_by_name(self):
+#     remove_pet_by_name(self.cc_pet_shop, "Arthur")
+#     pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
+#     self.assertIsNone(pet)
 
 # def remove_pet_by_name(pet_shop, name):
-#    pet_shop["pets"][3]["name"].remove(name)
+
+
+
+
 
 
 def get_customer_cash(customer):
@@ -45,15 +53,19 @@ def get_customer_cash(customer):
 def remove_customer_cash(customer, cash):
     customer["cash"] -= cash
     
+
+def get_customer_pet_count(customer):
+    if customer["pets"] == []:
+        return 0
+    else:
+        return len(customer["pets"])
+         
             
-
-
-            
-
-
-
-
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet)
     
+    
+
 
 # basically this function can be reuseable for other breeds if we want to look up
 # how many (so a count) of that specified breed is in the pet shop 
