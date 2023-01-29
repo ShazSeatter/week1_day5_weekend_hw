@@ -24,21 +24,45 @@ def get_stock_count(pet_shop):
     
 
 # def get_pets_by_breed(pet_shop, breed):
+    # pet_breeds = []
 
+    # for pet in pet_shop["pets"]:
+    #     if pet["name"] == breed:
+    #         pet_breeds.append(breed)
+    # return len(pet_breeds)
+
+
+# def
 
 
 def find_pet_by_name(pet_shop, name):
    for pet_name in pet_shop["pets"]:
-    if pet_name["name"] == name:
-        return pet_name
-
+        if pet_name["name"] == name:
+            return pet_name
 
 
 # def remove_pet_by_name(pet_shop, name):
+    
+
+#     for pet_name in pet_shop["name"]:
+#         if pet_name == name:
+#             del pet_shop["name"]
+
+# looping through list of "pets" using pet name 
+# remove pet once its found the correct name 
+
+#     if find_pet_by_name(pet_shop, name) == name:
+#         pet_shop["pets"].remove(name)
+
 #     for pet_name in pet_shop["pets"]["name"]:
 #         if pet_name == name:
 #             pet_shop["name"].remove(name)
 
+# def remove_pet_by_name(pet_shop, name)
+
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
+    
 
 
 def get_customer_cash(customer):
@@ -75,4 +99,9 @@ def customer_can_afford_pet(customer, new_pet):
 
 # Integration tests section 
 
+# def sell_pet_to_customer(pet_shop, pet, customer):
 
+    # updating pet count of the customer 
+    # updating pets sold of the pet store 
+    # getting customers cash
+    # updating/getting the total cash of the pet store
