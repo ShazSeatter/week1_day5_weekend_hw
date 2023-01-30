@@ -73,11 +73,12 @@ def add_pet_to_customer(customer, new_pet):
 # --- OPTIONAL section ---
 
 def customer_can_afford_pet(customer, new_pet):
+    # return customer["cash"] >= pet["price"]
+
     if customer["cash"] >= new_pet["price"]:
         return True
-    elif customer["cash"] < new_pet["price"]:
+    else:
         return False 
-
 
 # Integration tests section 
 
@@ -87,3 +88,5 @@ def customer_can_afford_pet(customer, new_pet):
     # updating pets sold of the pet store 
     # getting customers cash
     # updating/getting the total cash of the pet store
+
+    
