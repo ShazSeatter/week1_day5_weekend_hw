@@ -23,41 +23,30 @@ def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
     
 
-# def get_pets_by_breed(pet_shop, breed):
+def get_pets_by_breed(pet_shop, breed):
+    found_pets = []
+    for pet in pet_shop["pets"]:
+        if pet["breed"] == breed:
+            found_pets.append(pet)
 
-# def
+    return found_pets
 
 
 def find_pet_by_name(pet_shop, name):
    for pet_name in pet_shop["pets"]:
         if pet_name["name"] == name:
             return pet_name
-
-
-# def remove_pet_by_name(pet_shop, name):
     
 
-#     for pet_name in pet_shop["name"]:
-#         if pet_name == name:
-#             del pet_shop["name"]
+# def remove_pet_by_name(pet_shop, name):
+    # pet = find_pet_by_name(pet_shop, name)
+    # pet_shop["name"].remove(pet)
 
-# looping through list of "pets" using pet name 
-# remove pet once its found the correct name 
-
-#     if find_pet_by_name(pet_shop, name) == name:
-#         pet_shop["pets"].remove(name)
-
-#     for pet_name in pet_shop["pets"]["name"]:
-#         if pet_name == name:
-#             pet_shop["name"].remove(name)
-
-# def remove_pet_by_name(pet_shop, name)
 
 def add_pet_to_stock(pet_shop, new_pet):
     pet_shop["pets"].append(new_pet)
     
-
-
+    
 def get_customer_cash(customer):
     return customer["cash"]
 
